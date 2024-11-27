@@ -1,25 +1,39 @@
-
 # Graph-Enhanced Multi-Scale Contrastive Learning for Graph Anomaly Detection with Adaptive Diffusion Models
 
 
-
-An official source code for paper "Graph-Enhanced Multi-Scale Contrastive Learning for Graph Anomaly Detection with Adaptive Diffusion Models. This paper was submitted to IEEE Transactions on Big Data. Any communications or issues are welcomed. Please contact xiaocj@henu.edu.cn.
-
--------------
-
-### Overview
-
-<p align = "justify"> 
-Graph anomaly detection has gained significant research interest across various domains. Due to the lack of labeled data, contrastive learning has been applied in detecting anomalies and various contrastive strategies have been initiated. However, these methods might force two instances (e.g., node-level and subgraph-level representations) with different category labels to be consistent during model training, which can adversely impact the model robustness. Also, they extract node-level representations only based on node attributes, which are inadequate in reflecting the information of the structural anomaly. To tackle this problem, we present a Graph-enhanced multi-scale Contrastive Learning framework for Anomaly Detection, GCLAD. In this framework, we design a diffusion probabilistic model-based graph enhancement module to adaptively manipulate neighbors to generate enhanced graphs, which can efficiently enhance subgraph-level representations and alleviate the inconsistent problem. Further, we present a multi-scale contrastive module where we introduce meta-paths to exploit a few relevant neighbors to boost node-level representations, and build the multi-scale contrastive losses to promote anomaly detection performance.
+This is the PyTorch source code for the GCLAD. 
+The code runs on Python 3. 
+Install the dependencies and prepare the datasets with the following commands:
 
 
-<div  align="center">    
-    <img src="./assets/framework.png" width=80%/>
-</div>
 
-<div  align="center">    
-    Figure: The framework of GCLAD.
-</div>
+## Dataset
+
+The five public datasets used in the paper are shown below.
+
+The datasets can be downloaded from the following:
+
+### Cora Dataset
+Cora[29]: https://linqs.org/datasets/
+
+### Citeseer Dataset
+Citeseer[29]: https://linqs.org/datasets/
+
+### Pubmed Dataset
+Pubmed[29]: https://linqs.org/datasets/
+
+### Flickr Dataset
+Flickr[30]: https://github.com/XiaoxiaoMa-MQ/Awesome-Deep-Graph-Anomaly-Detection/tree/main/Datasets
+
+### Blogcatalog Dataset
+Blogcatalog[30]: https://github.com/XiaoxiaoMa-MQ/Awesome-Deep-Graph-Anomaly-Detection/tree/main/Datasets
+
+We added the links in Section IV. A. “Experimental Settings” (Page 7).
+
+[29] Collective classification in network data, AI magazine 2008.
+[30] Relational learning via latent social dimensions, KDD 2009.
+
+
 
 
 ### Requirements
@@ -34,6 +48,4 @@ Python package information is summarized in **requirements.txt**:
 
 ### Quick Start
 
-python run.py
-
-### Citation
+python execute.py
